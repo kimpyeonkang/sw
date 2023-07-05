@@ -2,15 +2,26 @@
 #include <stdlib.h>
 #include <time.h>
 
-double f_rand() {
-	return rand() / (double)RAND_MAX;
+int roll_dice();
+int roll_dice() {
+	return (rand() % 6) + 1;
 }
-
-int main(void) {
-	int i;
+int main(void)
+{
+	int user_total = 0, computer_total = 0;
 	srand(time(NULL));
-	for (i = 0; i < 5; i++) {
-		printf(" %f", f_rand());
+	for (int i = 0; i < 3; i++) {
+		user_total += roll_dice();
+		computer_total += roll_dice();
 	}
+	printf("사용자 주사위=%d\n", user_total);
+	printf("컴퓨터 주사위=%d\n",computer_total);
+
+	if (user_total > computer_total)
+		printf("사용자 승리");
+	else if (user_total < computer_total)
+		printf("컴퓨터 승리");
+	else
+		printf("무승부");
 	return 0;
 }

@@ -1,17 +1,18 @@
 #include <stdio.h>
-
-int is_leap(int year) {
-	if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-		printf("%d년은 366일입니다.", year);
-	}
-	else {
-		printf("%d년은 365일입니다", year);
-	}
+char check_alpha(char c);
+char check_alpha(char c)
+{
+	if ((c >= 'a' && c < 'z') || (c >= 'A' && c < 'Z'))
+		printf("%c는 알파벳 문자입니다.", c);
+	else
+		printf("알파벳 문자가 아닙니다.");
 }
-int main(void) {
-	int y;
-	printf("연도를 입력하시오: ");
-	scanf_s("%d", &y);
-	is_leap(y);
+int main(void)
+{
+	char c;
+	printf("문자를 입력하시오: ");
+	scanf_s("%c", &c);
+
+	check_alpha(c);
 	return 0;
 }
