@@ -2,7 +2,7 @@
 #define size 5
 int main(void)
 {
-	int arry[50][50];
+	int arry[5][5];
 	int i, j, idx;
 	int w = -1, s = 0, inc = 1, val = 0;
 
@@ -10,7 +10,7 @@ int main(void)
 
 	while (1)
 	{
-		for (i = 0; i < idx; i++) // °¡·Î ´ÜÀ§ ±×¸²
+		for (i = 0; i < idx; i++) // ê°€ë¡œ ë‹¨ìœ„ ê·¸ë¦¼
 		{
 			val++;
 			w = w + inc;
@@ -21,7 +21,7 @@ int main(void)
 		if (val == size * size)
 			break;
 
-		for (i = 0; i < idx; i++) // ¼¼·Î ´ÜÀ§ ±×¸²
+		for (i = 0; i < idx; i++) // ì„¸ë¡œ ë‹¨ìœ„ ê·¸ë¦¼
 		{
 			val++;
 			s = s + inc;
