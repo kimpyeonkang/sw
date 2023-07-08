@@ -4,23 +4,23 @@
 
 #define size 10
 
-void print_arry1(int arry1[size])    //¹è¿­ Ãâ·ÂÇÔ¼ö
+void print_arry1(int arry1[size])    //ë°°ì—´ ì¶œë ¥í•¨ìˆ˜
 {
     int i;
-    printf("Á¤·Ä Àü arry1[50]= ");
+    printf("ì •ë ¬ ì „ arry1[50]= ");
     for (i = 0; i < size; i++)
         printf("%3d ", arry1[i]);
 }
 
-void print_arry2(int arry2[size])    //¹è¿­ Ãâ·ÂÇÔ¼ö
+void print_arry2(int arry2[size])    //ë°°ì—´ ì¶œë ¥í•¨ìˆ˜
 {
     int i;
-    printf("\n\nÁ¤·Ä Àü arry2[50]= ");
+    printf("\n\nì •ë ¬ ì „ arry2[50]= ");
     for (i = 0; i < size; i++)
         printf("%3d ", arry2[i]);
 }
 
-void rand_arry1(int arry1[size])    //³­¼ö»ý¼º ÇÔ¼ö
+void rand_arry1(int arry1[size])    //ë‚œìˆ˜ìƒì„± í•¨ìˆ˜
 {
     int i;
     for (i = 0; i < size; i++) {
@@ -28,7 +28,7 @@ void rand_arry1(int arry1[size])    //³­¼ö»ý¼º ÇÔ¼ö
     }
 }
 
-void rand_arry2(int arry2[size])    //³­¼ö»ý¼º ÇÔ¼ö
+void rand_arry2(int arry2[size])    //ë‚œìˆ˜ìƒì„± í•¨ìˆ˜
 {
     int i;
     for (i = 0; i < size; i++) {
@@ -36,10 +36,10 @@ void rand_arry2(int arry2[size])    //³­¼ö»ý¼º ÇÔ¼ö
     }
 }
 
-void sort_arry1(int arry1[size])    //Á¤·ÄÇÔ¼ö
+void sort_arry1(int arry1[size])    //ì •ë ¬í•¨ìˆ˜
 {
     int i, j = 0, temp, least = 0;
-    printf("\n\nÁ¤·Ä ÈÄ arry1[10]=");
+    printf("\n\nì •ë ¬ í›„ arry1[10]=");
     for (i = 0; i < size - 1; i++) {
         least = i;
         for (j = i + 1; j < size; j++)
@@ -55,10 +55,10 @@ void sort_arry1(int arry1[size])    //Á¤·ÄÇÔ¼ö
     printf("\n\n");
 }
 
-void sort_arry2(int arry2[size])    //Á¤·ÄÇÔ¼ö
+void sort_arry2(int arry2[size])    //ì •ë ¬í•¨ìˆ˜
 {
     int i, j = 0, temp, least = 0;
-    printf("Á¤·Ä ÈÄ arry2[10]=");
+    printf("ì •ë ¬ í›„ arry2[10]=");
     for (i = 0; i < size - 1; i++) {
         least = i;
         for (j = i + 1; j < size; j++)
@@ -74,7 +74,7 @@ void sort_arry2(int arry2[size])    //Á¤·ÄÇÔ¼ö
     printf("\n");
 }
 
-void merge_arry3(int *arry1, int* arry2, int* arry3)    //º´ÇÕÇÔ¼ö
+void merge_arry3(int *arry1, int* arry2, int* arry3)    //ë³‘í•©í•¨ìˆ˜
 {
     int i = 0, j = 0, k = 0;
     for (i = 0; i < size && j < size;)
@@ -105,7 +105,7 @@ void merge_arry3(int *arry1, int* arry2, int* arry3)    //º´ÇÕÇÔ¼ö
         j++;
     }
 
-    printf("\nÇÕÃÄÁø ¹è¿­ ¿ä¼Ò : ");
+    printf("\ní•©ì³ì§„ ë°°ì—´ ìš”ì†Œ : ");
     for (i = 0; i < 2 * size; i++)
     {
         printf("%d ", arry3[i]);
@@ -118,7 +118,7 @@ int main()
     srand((unsigned)time(NULL));
     int arry1[size] = { 0 };
     int arry2[size] = { 0 };
-    int arry3[30] = { 0 };
+    int arry3[20] = { 0 };
 
     rand_arry1(arry1);
     rand_arry2(arry2);
