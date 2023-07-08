@@ -3,11 +3,9 @@
 int main(void)
 {
 	int arry[5][5];
-	int i, j, idx;
+	int i, j, idx = size;
 	int w = -1, s = 0, inc = 1, val = 0;
-
-	idx = size;
-
+	
 	while (1)
 	{
 		for (i = 0; i < idx; i++) // 가로 단위 그림
